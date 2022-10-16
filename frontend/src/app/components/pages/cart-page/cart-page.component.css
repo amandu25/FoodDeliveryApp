@@ -15,7 +15,7 @@ ul {
   border-radius: 1rem;
   list-style: none;
   margin: 0.5rem;
-  padding: 0;
+  padding: 0.1;
 }
 
 ul li {
