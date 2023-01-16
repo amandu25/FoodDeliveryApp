@@ -10,10 +10,7 @@ import { Food } from 'src/app/shared/models/Food';
 })
 export class HomeComponent implements OnInit {
   foods: Food[] = [];
-  constructor(
-    private foodService: FoodService,
-    activatedRoute: ActivatedRoute
-  ) {
+  constructor(public foodService: FoodService, activatedRoute: ActivatedRoute) {
     activatedRoute.params.subscribe((params) => {
       if (params.searchTerm)
         this.foods = this.foodService.getAllFoodsBySearchTerm(

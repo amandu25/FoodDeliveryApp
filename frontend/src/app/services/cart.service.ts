@@ -9,7 +9,7 @@ import { Food } from '../shared/models/Food';
   providedIn: 'root',
 })
 export class CartService {
-  private cart: Cart = new Cart();
+  private cart: Cart = this.getCartFromLocalStorage(); //new Cart();
   private cartSubject: BehaviorSubject<Cart> = new BehaviorSubject(this.cart);
 
   constructor() {}

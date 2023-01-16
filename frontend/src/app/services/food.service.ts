@@ -8,6 +8,7 @@ import { Tag } from '../shared/models/Tag';
 })
 export class FoodService {
   constructor() {}
+  ShowFoodPage = false;
   getAll(): Food[] {
     return sample_foods;
   }

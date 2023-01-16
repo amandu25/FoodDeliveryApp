@@ -2,9 +2,13 @@
 <app-tags></app-tags>
 <app-not-found [visible]="!foods || !foods.length" resetLinkText="Reset Search">
 </app-not-found>
+<!-- <app-food-page *ngIf="foodService.ShowFoodPage"></app-food-page> -->
 <ul>
   <li *ngFor="let food of foods">
-    <a routerLink="/food/{{ food.id }}">
+    <a
+      routerLink="/food/{{ food.id }}"
+      (click)="foodService.ShowFoodPage = !foodService.ShowFoodPage"
+    >
       <img [src]="food.imageUrl" [alt]="food.name" />
       <div class="content">
         <div class="name">
